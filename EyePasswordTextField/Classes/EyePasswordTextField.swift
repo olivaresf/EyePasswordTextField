@@ -116,13 +116,7 @@ extension EyePasswordTextField
 
         // Create the eye button.
         let eyeButton = PasswordEyeButton()
-
-        // Add the required action.
-        eyeButton.onSelect = { [weak self] in
-            guard let self = self else { return }
-            self.fieldDelegate?.didTapEyeButton(forTextfield: self)
-            self.isSecureTextEntry.toggle()
-        }
+        eyeButton.delegate = self
 
         // Add the button to text field.
         self.rightViewMode = .always
@@ -138,5 +132,12 @@ extension EyePasswordTextField
     public var isPasswordValid: Bool
     {
         return self.passwordRule.validatePassword(password: self.text ?? "")
+    }
+}
+
+extension EyePasswordTextField: PasswordEyeButtonDelegate {
+    func didSelect() {
+        self.fieldDelegate?.didTapEyeButton(forTextfield: self)
+        self.isSecureTextEntry.toggle()
     }
 }
