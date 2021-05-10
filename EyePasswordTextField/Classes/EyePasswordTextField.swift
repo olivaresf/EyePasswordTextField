@@ -136,8 +136,8 @@ extension EyePasswordTextField
 }
 
 extension EyePasswordTextField: PasswordEyeButtonDelegate {
-    func didSelect() {
-        self.fieldDelegate?.didTapEyeButton(forTextfield: self)
-        self.isSecureTextEntry.toggle()
+    func togglePasswordShow(sender: PasswordEyeButton) {
+        fieldDelegate?.didTapEyeButton(forTextfield: self)
+        isSecureTextEntry.toggle()
     }
 }

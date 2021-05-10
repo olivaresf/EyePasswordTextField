@@ -8,7 +8,7 @@
 import UIKit
 
 protocol PasswordEyeButtonDelegate: AnyObject {
-    func didSelect()
+    func togglePasswordShow(sender: PasswordEyeButton)
 }
 ///
 /// The Password Eye button
@@ -102,14 +102,14 @@ extension PasswordEyeButton
     ///
     @objc private func onButtonTapped()
     {
-        guard self.isEnabled else { return }
+        guard isEnabled else { return }
 
         // Toggle current eye state.
-        self.toggleEyeState()
+        toggleEyeState()
         // Update button icon.
-        self.updateIcon()
+        updateIcon()
         // Perform selection action.
-        delegate?.didSelect()
+        delegate?.togglePasswordShow(sender: self)
     }
 }
 
