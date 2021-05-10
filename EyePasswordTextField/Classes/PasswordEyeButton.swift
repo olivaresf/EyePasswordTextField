@@ -7,12 +7,18 @@
 
 import UIKit
 
+protocol PasswordEyeButtonDelegate : class {
+    func toggleVisibility(sender: PasswordEyeButton)
+}
 
 ///
 /// The Password Eye button
 ///
 public class PasswordEyeButton: UIButton
 {
+    
+    weak var delegate: PasswordEyeButtonDelegate?
+    
     ///
     /// State of the eye.
     ///
@@ -40,9 +46,6 @@ public class PasswordEyeButton: UIButton
                 .withRenderingMode(.alwaysTemplate)
         }
     }
-
-    /// An action when button is tapped.
-    var onSelect: (() -> Void)?
 
     /// The icon to set on eye button for `open` eye state.
     var showPasswordIcon: UIImage?
@@ -101,14 +104,12 @@ extension PasswordEyeButton
     ///
     @objc private func onButtonTapped()
     {
-        guard self.isEnabled else { return }
+        guard isEnabled else { return }
 
-        // Toggle current eye state.
-        self.toggleEyeState()
-        // Update button icon.
-        self.updateIcon()
-        // Perform selection action.
-        self.onSelect?()
+        toggleEyeState()
+        updateIcon()
+        
+        delegate?.toggleVisibility(sender: self)
     }
 }
 
