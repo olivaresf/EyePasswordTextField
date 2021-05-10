@@ -14,6 +14,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		9B98112326490A9500E063FB /* hidePasswordIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B98112126490A9500E063FB /* hidePasswordIcon.png */; };
+		9B98112426490A9500E063FB /* showPasswordIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B98112226490A9500E063FB /* showPasswordIcon.png */; };
 		CCE774829FD57144468BE04C /* Pods_EyePasswordTextField_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 541839F5D136173FD577B03A /* Pods_EyePasswordTextField_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		607FACE51AFB9204008FA782 /* EyePasswordTextField_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyePasswordTextField_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		9B98112126490A9500E063FB /* hidePasswordIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hidePasswordIcon.png; path = ../../hidePasswordIcon.png; sourceTree = "<group>"; };
+		9B98112226490A9500E063FB /* showPasswordIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = showPasswordIcon.png; path = ../../showPasswordIcon.png; sourceTree = "<group>"; };
 		A0651A759ACC073FC8C69079 /* Pods-EyePasswordTextField_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyePasswordTextField_Tests.release.xcconfig"; path = "Target Support Files/Pods-EyePasswordTextField_Tests/Pods-EyePasswordTextField_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		AF08147A773872B5D0868799 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BDA85F6A6D563563CA63A965 /* Pods-EyePasswordTextField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyePasswordTextField_Example.debug.xcconfig"; path = "Target Support Files/Pods-EyePasswordTextField_Example/Pods-EyePasswordTextField_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				9B98112126490A9500E063FB /* hidePasswordIcon.png */,
+				9B98112226490A9500E063FB /* showPasswordIcon.png */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for EyePasswordTextField";
@@ -245,9 +251,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B98112426490A9500E063FB /* showPasswordIcon.png in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				9B98112326490A9500E063FB /* hidePasswordIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
